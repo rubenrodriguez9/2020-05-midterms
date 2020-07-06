@@ -52,16 +52,15 @@ function countAs(arr){
 }
 
 function deleteMiddleLetters(str){
-  let result = ''
   let middleChar = str.length /2;
-  for(let i = 0;i < str.length;i++){
-    if(str.length % 2 === 0){
-      i = i +1
-    }else result = result + str[i]
-    
+  if(str.length % 2 === 0){
+    return str.slice(0, middleChar-1) + str.slice(middleChar+1)
+  }else if(str.length % 2 === 1){
+    return str.slice(0, middleChar) + str.slice(middleChar + 1)
   }
-  return result
-}
+  }
+
+    
 
 
 function lastIndexOfSpace(str){
