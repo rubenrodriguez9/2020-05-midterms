@@ -16,21 +16,20 @@ return result
 
 
 function isValidPassword(str){
+  let space = ' '
   for(let i = 0;i < str.length;i++){
-    if (str[i] !== ' '){
+    if(str.length < 12){
       return false
-
-    }else if(str.length < 12){
+    }else if(str.length < 12 && space.includes(str[i] === true)){
       return false
     }else if(str.length >11 && str[i] === ' '){
       return false
-    }else if(str[i] !== ' '){
+    }else if(str.length > 11 && str[i] !== ' '){
+      return true
+    }else if(str === ''){
       return false
-    }else if(str.length > 11) {true}
-    
-    
+    }
   }
-return result
 }
 
 function makeHalfSquares(arr){
